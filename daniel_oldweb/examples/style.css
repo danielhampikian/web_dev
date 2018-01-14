@@ -1,0 +1,67 @@
+body {
+    font-family: Arial sans-serif;
+    color: #89cdff;
+    background-color: black;
+    <!--background-image: url(http://img.wikinut.com/img/2941ztja9bjys3e3/jpeg/0/Falling-Leaves.jpeg);-->
+}   
+
+ol  {
+
+    list-style-type: upper-roman;
+}
+img {
+    width: 50%;
+}
+table, td {
+        border: 3px solid yellow;
+        border-collapse: collapse;
+        padding: 5px;
+}
+
+h1  {
+    font-size: 1cm;
+    font-weight: bold;
+    font-style: italic;
+}
+a   {
+    text-decoration: none;
+    color: yellow;
+}
+
+h1, h2{
+    color: #66ff33;
+}
+
+p   {
+    text-indent: 50px;
+}
+
+#textID {
+    text-transform: uppercase;
+    color: red;
+}
+
+.exampleClass {
+color: #ffffff;
+}
+
+.shout {
+    text-transform: uppercase;
+    color: blue;
+}
+.bordered-box{
+    border: 3px solid white;
+    padding: 5px;
+    margin: 10 px;
+    font-size 1cm;
+}
+
+
+ul#top-nav {
+    
+    display:inlne;
+    border: 2px
+    padding: 10px
+    float: right
+}
+

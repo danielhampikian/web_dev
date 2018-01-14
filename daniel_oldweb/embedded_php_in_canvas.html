@@ -1,0 +1,24 @@
+
+<html>
+<script type="text/javascript">
+        function draw(indent) {
+        var canvas = document.getElementById('mycanvas');
+        var drawshape = canvas.getContext('2d');
+        canvas.width = 800;
+        canvas.height = 400;
+
+        drawshape.fillStyle = #00ff00;
+        drawshape.fillRect(50 *indent , 50, 20, 20);
+    }
+</script>
+</html>
+
+
+<?php
+$query = 'SELECT * FROM table';
+$result = mysql_query($query);
+    while($value = mysql_fetch_array($result)) {
+        $indent =  $value['indent'];
+        echo '<script type="text/javascript">    draw('.$indent.');      </script>';
+    }
+?>

@@ -1,0 +1,82 @@
+.square {
+	height: 50px;
+	width:  50px;
+	border: 2px solid black;
+	position: absolute;
+}
+
+.circle {
+	height: 50px;
+	width:  50px;
+	border-radius: 50%;
+	border: 2px solid black;
+	position: absolute;
+}
+
+#shapearea {
+	height: 700px;
+	width: 500px;
+	border: 2px solid black;
+	position: relative;
+
+
+}
+
+
+h1 {
+	padding: 10px;
+	margin: 20px;
+	font-family: sans-serif;
+
+}
+
+
+body {
+	/*background-color: #66ccff;*/
+}
+
+#navbar {
+
+}
+
+#footer > div.img {
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+}
+
+#navbar ul {
+	list-style: none;
+}
+
+h2 {
+	padding: 10px;
+	margin: 10px;
+}
+
+h3 {
+	padding: 10px;
+	margin: 10px;
+}
+
+#navbar li {
+
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	border left: 1px solid #999; 
+	background-color: #A9BCE2;
+	border-radius: 10px;
+
+}
+
+#navbar a:hover {
+	color: #6D6D5A;
+}
+#navbar #current_page {
+	background-color: #4782A3;
+}
