@@ -16,4 +16,11 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
-
+**/wordpress
+**/talk_timer
+**/unity_server
+**/phpMyAdmin
+**/resume
+**/horizons
+**/daniel_oldweb
+**/firebaseProto
