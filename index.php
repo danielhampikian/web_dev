@@ -62,6 +62,19 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/2vMKM6J0wfk" frameborder="2"  allowfullscreen></iframe>
 		</div>
 	</div>
+		<div class="row">
+		 <div class="col-xs-6 col-lg-4">
+		<h3>Bootstrap Web Dev Part 1: Setting up Dreamweaver with a remote AWS ec2 server</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/T1ggbUU0EDA" frameborder="0"  allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-6 col-lg-4">
+		<h3>Bootstrap Web Dev Part 2: Foundational Bootstrap Skills with Dreamweaver and Remote AWS server</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/kGF0wai_tjw" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
 		
 	</div>
   
