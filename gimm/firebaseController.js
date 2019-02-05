@@ -7,6 +7,7 @@ var locationsArray;
 function testWrite(){
 	this.writeUserData("this", "is", "a", "test");
 }
+//
 //the plus userid insures, if userID is unique, that we will get a new user for each
 function writeUserData(userId, name, email, imageUrl) {
   firebase.database().ref('users/' + userId).set({
