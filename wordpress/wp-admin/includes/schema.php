@@ -430,7 +430,7 @@ function populate_options() {
 	'moderation_keys' => '',
 	'active_plugins' => array(),
 	'category_base' => '',
-	'ping_sites' => 'http://rpc.pingomatic.com/',
+	'ping_sites' => 'https://rpc.pingomatic.com/',
 	'comment_max_links' => 2,
 	'gmt_offset' => $gmt_offset,
 
@@ -1064,7 +1064,7 @@ We hope you enjoy your new site. Thanks!
 		$vhost_ok = false;
 		$errstr = '';
 		$hostname = substr( md5( time() ), 0, 6 ) . '.' . $domain; // Very random hostname!
-		$page = wp_remote_get( 'http://' . $hostname, array( 'timeout' => 5, 'httpversion' => '1.1' ) );
+		$page = wp_remote_get( 'https://' . $hostname, array( 'timeout' => 5, 'httpversion' => '1.1' ) );
 		if ( is_wp_error( $page ) )
 			$errstr = $page->get_error_message();
 		elseif ( 200 == wp_remote_retrieve_response_code( $page ) )

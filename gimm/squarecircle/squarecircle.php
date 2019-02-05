@@ -5,7 +5,7 @@
   require_once('../../header.php');
   require_once('../../nav.php');
 ?>
-<script src="http://www.danielhampikian.com/js/squarecircle.js" type="text/javascript"></script>
+<script src="https://www.danielhampikian.com/js/squarecircle.js" type="text/javascript"></script>
 
 <body id="breakB">
   

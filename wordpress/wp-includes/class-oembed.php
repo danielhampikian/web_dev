@@ -5,7 +5,7 @@
  * Used internally by the WP_Embed class, but is designed to be generic.
  *
  * @link https://codex.wordpress.org/oEmbed oEmbed Codex Article
- * @link http://oembed.com/ oEmbed Homepage
+ * @link https://oembed.com/ oEmbed Homepage
  *
  * @package WordPress
  * @subpackage oEmbed
@@ -60,14 +60,14 @@ class WP_oEmbed {
 			'#https?://(www\.)?flickr\.com/.*#i'                                  => array( 'https://www.flickr.com/services/oembed/',               true  ),
 			'#https?://flic\.kr/.*#i'                                             => array( 'https://www.flickr.com/services/oembed/',               true  ),
 			'#https?://(.+\.)?smugmug\.com/.*#i'                                  => array( 'https://api.smugmug.com/services/oembed/',              true  ),
-			'#https?://(www\.)?hulu\.com/watch/.*#i'                              => array( 'http://www.hulu.com/api/oembed.{format}',               true  ),
-			'http://i*.photobucket.com/albums/*'                                  => array( 'http://api.photobucket.com/oembed',                     false ),
-			'http://gi*.photobucket.com/groups/*'                                 => array( 'http://api.photobucket.com/oembed',                     false ),
+			'#https?://(www\.)?hulu\.com/watch/.*#i'                              => array( 'https://www.hulu.com/api/oembed.{format}',               true  ),
+			'https://i*.photobucket.com/albums/*'                                  => array( 'https://api.photobucket.com/oembed',                     false ),
+			'https://gi*.photobucket.com/groups/*'                                 => array( 'https://api.photobucket.com/oembed',                     false ),
 			'#https?://(www\.)?scribd\.com/doc/.*#i'                              => array( 'https://www.scribd.com/services/oembed',                true  ),
 			'#https?://wordpress\.tv/.*#i'                                        => array( 'https://wordpress.tv/oembed/',                          true  ),
 			'#https?://(.+\.)?polldaddy\.com/.*#i'                                => array( 'https://polldaddy.com/oembed/',                         true  ),
 			'#https?://poll\.fm/.*#i'                                             => array( 'https://polldaddy.com/oembed/',                         true  ),
-			'#https?://(www\.)?funnyordie\.com/videos/.*#i'                       => array( 'http://www.funnyordie.com/oembed',                      true  ),
+			'#https?://(www\.)?funnyordie\.com/videos/.*#i'                       => array( 'https://www.funnyordie.com/oembed',                      true  ),
 			'#https?://(www\.)?twitter\.com/\w{1,15}/status(es)?/.*#i'            => array( 'https://publish.twitter.com/oembed',                    true  ),
 			'#https?://(www\.)?twitter\.com/\w{1,15}$#i'                          => array( 'https://publish.twitter.com/oembed',                    true  ),
 			'#https?://(www\.)?twitter\.com/\w{1,15}/likes$#i'                    => array( 'https://publish.twitter.com/oembed',                    true  ),

@@ -90,8 +90,8 @@ defineGlobal("global!tinymce.util.Tools.resolve", tinymce.util.Tools.resolve);
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -110,8 +110,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -130,8 +130,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -150,8 +150,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -177,8 +177,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -224,8 +224,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -301,8 +301,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -345,8 +345,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -365,8 +365,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -407,8 +407,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -472,8 +472,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -524,8 +524,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -544,8 +544,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -581,8 +581,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -641,8 +641,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -661,8 +661,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -721,8 +721,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -741,8 +741,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -854,8 +854,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -874,8 +874,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 /**
@@ -913,8 +913,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1048,8 +1048,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1068,8 +1068,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1088,8 +1088,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 /**
@@ -1177,8 +1177,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1288,8 +1288,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1320,8 +1320,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1366,9 +1366,9 @@ define(
     var askAboutPrefix = function (editor, href) {
       return new Promise(function (resolve) {
         editor.windowManager.confirm(
-          'The URL you entered seems to be an external link. Do you want to add the required http:// prefix?',
+          'The URL you entered seems to be an external link. Do you want to add the required https:// prefix?',
           function (result) {
-            var output = result === true ? 'http://' + href : href;
+            var output = result === true ? 'https://' + href : href;
             resolve(output);
           }
         );
@@ -1453,8 +1453,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2017 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1473,8 +1473,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1586,8 +1586,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1832,8 +1832,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1868,8 +1868,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1913,8 +1913,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(
@@ -1998,8 +1998,8 @@ define(
  * Released under LGPL License.
  * Copyright (c) 1999-2016 Ephox Corp. All rights reserved
  *
- * License: http://www.tinymce.com/license
- * Contributing: http://www.tinymce.com/contributing
+ * License: https://www.tinymce.com/license
+ * Contributing: https://www.tinymce.com/contributing
  */
 
 define(

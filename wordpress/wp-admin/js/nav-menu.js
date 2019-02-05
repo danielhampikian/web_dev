@@ -941,7 +941,7 @@ var wpNavMenu;
 
 			processMethod = processMethod || api.addMenuItemToBottom;
 
-			if ( '' === url || 'http://' == url ) {
+			if ( '' === url || 'https://' == url ) {
 				$('#customlinkdiv').addClass('form-invalid');
 				return false;
 			}
@@ -953,7 +953,7 @@ var wpNavMenu;
 				$( '.customlinkdiv .spinner' ).removeClass( 'is-active' );
 				// Set custom link form back to defaults
 				$('#custom-menu-item-name').val('').blur();
-				$('#custom-menu-item-url').val('http://');
+				$('#custom-menu-item-url').val('https://');
 			});
 		},
 

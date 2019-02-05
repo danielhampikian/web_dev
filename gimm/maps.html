@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href="mapstyle.css" rel="stylesheet">
+  </head>
+  <body>
+	  <input id="testFire" type="button" value="testFire" onclick="testWrite();" />
+	  <input id="testMarker" type="button" value="testMarker" onclick="testMarker();" />
+	  <input id="testWriteLocation" type="button" value="testWriteLocation" onclick="testWriteLocation();" />
+	  <!-- Trigger/Open The Modal -->
+	<button id="modalOpen">Open Modal</button>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+  	<!-- Modal content -->
+  	<div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Enter Text..</p>
+	<input id="modalText" type="input" value=""/>
+	<input id="testWriteFromModal" type="button" value="testWriteFromModal" onclick="testWriteFromModal();" />
+  	</div>
+
+</div>
+    <div id="map"></div>
+		  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBt5erN8HknFEgzccQIRqpc2jretMT-WsU",
+    authDomain: "ionic-geolocation-11d74.firebaseapp.com",
+    databaseURL: "https://ionic-geolocation-11d74.firebaseio.com",
+    projectId: "ionic-geolocation-11d74",
+    storageBucket: "ionic-geolocation-11d74.appspot.com",
+    messagingSenderId: "374306662139"
+  };
+  firebase.initializeApp(config);
+</script>
+	  <script src="firebaseController.js"></script>
+	   <script src="modal.js"></script>
+    <script src="location.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCauzQqKcsYQLd454fO6HaLpaFGIsm5Sdc&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
+

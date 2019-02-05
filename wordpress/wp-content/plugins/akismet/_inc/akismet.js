@@ -74,7 +74,7 @@ jQuery( function ( $ ) {
 				if (response) {
 					// Add "x" link
 					$("a[commentid='"+ thisId +"']").show();
-					// Show link. Core strips leading http://, so let's do that too.
+					// Show link. Core strips leading https://, so let's do that too.
 					$("#author_comment_url_"+ thisId).removeClass('akismet_undo_link_removal').text( thisUrl.replace( /^http:\/\/(www\.)?/ig, '' ) );
 				}
 			}

@@ -705,7 +705,7 @@ class Akismet_Admin {
 			$response = wp_remote_get( 'https://rest.akismet.com/1.1/test' );
 		}
 		else {
-			$response = wp_remote_get( 'http://rest.akismet.com/1.1/test' );
+			$response = wp_remote_get( 'https://rest.akismet.com/1.1/test' );
 		}
 
 		$debug[ 'gethostbynamel' ]  = function_exists('gethostbynamel') ? 'exists' : 'not here';

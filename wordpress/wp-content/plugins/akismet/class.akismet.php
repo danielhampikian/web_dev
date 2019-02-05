@@ -1018,7 +1018,7 @@ class Akismet {
 			'timeout' => 15
 		);
 
-		$akismet_url = $http_akismet_url = "http://{$http_host}/1.1/{$path}";
+		$akismet_url = $http_akismet_url = "https://{$http_host}/1.1/{$path}";
 
 		/**
 		 * Try SSL first; if that fails, try without it and don't try it again for a while.

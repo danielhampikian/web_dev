@@ -26,7 +26,7 @@ function wp_credits() {
 		|| false !== strpos( $wp_version, '-' )
 		|| ( isset( $results['data']['version'] ) && strpos( $wp_version, $results['data']['version'] ) !== 0 )
 	) {
-		$url = "http://api.wordpress.org/core/credits/1.1/?version={$wp_version}&locale={$locale}";
+		$url = "https://api.wordpress.org/core/credits/1.1/?version={$wp_version}&locale={$locale}";
 		$options = array( 'user-agent' => 'WordPress/' . $wp_version . '; ' . home_url( '/' ) );
 
 		if ( wp_http_supports( array( 'ssl' ) ) ) {

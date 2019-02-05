@@ -32,8 +32,8 @@ if (!isset($_SESSION["access_granted"]) || (isset($_SESSION["access_granted"]) &
             <h2>Instructors: login or create an account for your class</h2>
             <h2>Everyone else, enjoy the games!!!</h2>
 
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-latest.js"></script>
             <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
             <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 

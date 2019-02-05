@@ -10,17 +10,17 @@
     
 
 	    <!-- Bootstrap core CSS -->
-    <link href="http://danielhampikian.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.danielhampikian.com/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="http://danielhampikian.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="https://www.danielhampikian.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="http://danielhampikian.com/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="https://www.danielhampikian.com/css/navbar-fixed-top.css" rel="stylesheet">
     
     
-    <link rel="icon" href="http://danielhampikian.com/images/logo_final.png">
-    <link href="http://www.danielhampikian.com/css/style.css" rel="stylesheet">
+    <link rel="icon" href="https://www.danielhampikian.com/images/logo_final.png">
+    <link href="https://www.danielhampikian.com/css/style.css" rel="stylesheet">
 	
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

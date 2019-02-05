@@ -1052,7 +1052,7 @@ function auth_redirect() {
 	// The cookie is no good so force login
 	nocache_headers();
 
-	$redirect = ( strpos( $_SERVER['REQUEST_URI'], '/options.php' ) && wp_get_referer() ) ? wp_get_referer() : set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+	$redirect = ( strpos( $_SERVER['REQUEST_URI'], '/options.php' ) && wp_get_referer() ) ? wp_get_referer() : set_url_scheme( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
 
 	$login_url = wp_login_url($redirect, true);
 
@@ -1325,7 +1325,7 @@ function wp_validate_redirect($location, $default = '') {
 	if ( substr($location, 0, 2) == '//' )
 		$location = 'http:' . $location;
 
-	// In php 5 parse_url may fail if the URL query part contains http://, bug #38143
+	// In php 5 parse_url may fail if the URL query part contains https://, bug #38143
 	$test = ( $cut = strpos($location, '?') ) ? substr( $location, 0, $cut ) : $location;
 
 	// @-operator is used to prevent possible warnings in PHP < 5.3.3.

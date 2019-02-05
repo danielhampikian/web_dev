@@ -1294,7 +1294,7 @@ function wp_dashboard_primary() {
 			 *
 			 * @param string $url The widget's primary feed URL.
 			 */
-			'url' => apply_filters( 'dashboard_primary_feed', __( 'http://wordpress.org/news/feed/' ) ),
+			'url' => apply_filters( 'dashboard_primary_feed', __( 'https://wordpress.org/news/feed/' ) ),
 
 			/**
 			 * Filters the primary link title for the 'WordPress News' dashboard widget.
@@ -1512,7 +1512,7 @@ function wp_check_browser_version() {
 		// include an unmodified $wp_version
 		include( ABSPATH . WPINC . '/version.php' );
 
-		$url = 'http://api.wordpress.org/core/browse-happy/1.1/';
+		$url = 'https://api.wordpress.org/core/browse-happy/1.1/';
 		$options = array(
 			'body'       => array( 'useragent' => $_SERVER['HTTP_USER_AGENT'] ),
 			'user-agent' => 'WordPress/' . $wp_version . '; ' . home_url( '/' )

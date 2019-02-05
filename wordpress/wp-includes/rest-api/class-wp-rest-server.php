@@ -1030,7 +1030,7 @@ class WP_REST_Server {
 
 		$response = new WP_REST_Response( $available );
 
-		$response->add_link( 'help', 'http://v2.wp-api.org/' );
+		$response->add_link( 'help', 'https://v2.wp-api.org/' );
 
 		/**
 		 * Filters the API root index data.

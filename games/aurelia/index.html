@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aurelia's Artwork</title>
+	    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+<script type="text/javascript">
+
+	var maxZ = 100000;
+	var minZ = 2;
+var shapeMaxD = 40;
+var shapeMinD = 20;
+	var canvasW = 1000;
+var canvasH = 1200;
+	function frontClick(){
+var oldZ = parseInt(this.style.zIndex);
+	if (oldZ == maxZ) {
+		this.parentNode.removeChild(this);
+	}
+	else {
+		maxZ++;
+		this.style.zIndex = maxZ;
+	}
+}
+
+	function clearAll() {
+	var artArea = document.getElementById("canvasHolder");
+	var shapes = artArea.getElementsByTagName("div");
+	for (let i = shapes.length - 1; i >= 0; i--) {
+		shapes[i].parentNode.removeChild(shapes[i]);
+	}
+}
+	function getRandomColorHex() {
+	var letters = "0123456789abcdef";
+	var result = "#";
+	for (var i = 0; i<6; i++) {
+		result += letters.charAt(parseInt(Math.random() * letters.length));
+	}
+	return result;
+}
+function addSquare() {
+	var square = document.createElement("div");
+	square.className = "square_custom";
+	square.style.left = randXPos();
+	square.style.top = randYPos();
+	square.style.zIndex = minZ;
+	minZ++;
+	square.style.backgroundColor = getRandomColorHex();
+	var randW = randDim();
+	var randH = randDim();
+	square.style.width = randW;
+	square.style.height = randH;
+	square.onclick = frontClick;
+	var artArea = document.getElementById("canvasHolder");
+	artArea.appendChild(square);
+}
+
+function addCircle(){
+	var circle = document.createElement("div");
+	circle.className = "circle_custom";
+	circle.style.left = randXPos();
+	circle.style.top = randYPos();
+	circle.style.zIndex = minZ;
+	minZ++;
+	circle.style.backgroundColor = getRandomColorHex();
+	var randW = randDim();
+	var randH = randDim();
+	circle.style.width = randW;
+	circle.style.height = randH;
+	circle.onclick = frontClick;
+	var artArea = document.getElementById("canvasHolder");
+	artArea.appendChild(circle);
+}
+
+function addTriangle(){
+	var triangle = document.createElement("div");
+	triangle.className = "triangle_custom";
+	triangle.style.left = randXPos();
+	triangle.style.top = randYPos();
+	triangle.style.zIndex = minZ;
+	minZ++;
+	var randC = getRandomColorHex();
+	var randB = randDim();
+	triangle.style.borderRight = randB + " solid transparent";
+	triangle.style.borderLeft = randB + " solid transparent";
+	triangle.style.borderBottom = randB + " solid " + randC;
+	triangle.onclick = frontClick;
+	var artArea = document.getElementById("canvasHolder");
+	artArea.appendChild(triangle);
+}
+
+	function generateRandom() {
+	var shape = (parseInt(Math.random()*3));
+	switch(shape) {
+		case 0:
+			addSquare();
+			break;
+		case 1:
+			addCircle();
+			break;
+		case 2:
+			addTriangle();
+			break;
+		default:
+		break;
+	}
+}
+	function randXPos(){
+	return (parseInt(Math.random() * canvasW)) + "px";
+}
+function randYPos(){
+	return (parseInt(Math.random() * canvasH)) + "px";
+}
+function randDim(){
+	return (parseInt(Math.random() * shapeMaxD) + shapeMinD) + "px";
+}
+	window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+		generateRandom();
+  switch (event.key) {
+    case "ArrowDown":
+		  addSquare();
+      // code for "down arrow" key press.
+      break;
+    case "ArrowUp":
+		  addCircle();
+      // code for "up arrow" key press.
+      break;
+    case "ArrowLeft":
+		  addTriangle();
+      // code for "left arrow" key press.
+      break;
+    case "ArrowRight":
+		  addCircle();
+      // code for "right arrow" key press.
+      break;
+    default:
+		  generateRandom();
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+    // Variables for referencing the canvas and 2dcanvas context
+    var canvas,ctx, video;
+
+    // Variables to keep track of the mouse position and left-button status
+    var mouseX,mouseY,mouseDown=0;
+
+    // Variables to keep track of the touch position
+    var touchX,touchY;
+
+    function getRandomColor() {
+      	return (parseInt(Math.random()*255));
+    }
+    function getRandomSize() {
+        return (parseInt(Math.random()*20));
+    }
+
+
+    // Draws a dot at a specific position on the supplied canvas name
+    // Parameters are: A canvas context, the x position, the y position, the size of the dot
+    function drawDot(ctx,x,y,size) {
+        // Let's use black by setting RGB values to 0, and 255 alpha (completely opaque)
+        r=getRandomColor(); g=getRandomColor(); b=getRandomColor(); a=getRandomColor();
+        size = getRandomSize();
+        // Select a fill style
+        ctx.fillStyle = "rgba("+r+","+g+","+b+","+(a/255)+")";
+
+        // Draw a filled circle
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI*2, true);
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    // Clear the canvas context using the canvas width and height
+    function clearCanvas(canvas,ctx) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Keep track of the mouse button being pressed and draw a dot at current location
+    function sketchpad_mouseDown() {
+        mouseDown=1;
+        drawDot(ctx,mouseX,mouseY,12);
+    }
+
+    // Keep track of the mouse button being released
+    function sketchpad_mouseUp() {
+        mouseDown=0;
+    }
+
+    // Keep track of the mouse position and draw a dot if mouse button is currently pressed
+    function sketchpad_mouseMove(e) {
+        // Update the mouse co-ordinates when moved
+        getMousePos(e);
+
+        // Draw a dot if the mouse button is currently being pressed
+        if (mouseDown==1) {
+            drawDot(ctx,mouseX,mouseY,12);
+        }
+    }
+
+    // Get the current mouse position relative to the top-left of the canvas
+    function getMousePos(e) {
+        if (!e)
+            var e = event;
+
+        if (e.offsetX) {
+            mouseX = e.offsetX;
+            mouseY = e.offsetY;
+        }
+        else if (e.layerX) {
+            mouseX = e.layerX;
+            mouseY = e.layerY;
+        }
+     }
+
+    // Draw something when a touch start is detected
+    function sketchpad_touchStart() {
+        // Update the touch co-ordinates
+        getTouchPos();
+
+        drawDot(ctx,touchX,touchY,12);
+
+        // Prevents an additional mousedown event being triggered
+        event.preventDefault();
+    }
+
+    // Draw something and prevent the default scrolling when touch movement is detected
+    function sketchpad_touchMove(e) {
+        // Update the touch co-ordinates
+        getTouchPos(e);
+
+        // During a touchmove event, unlike a mousemove event, we don't need to check if the touch is engaged, since there will always be contact with the screen by definition.
+        drawDot(ctx,touchX,touchY,12);
+
+        // Prevent a scrolling action as a result of this touchmove triggering.
+        event.preventDefault();
+    }
+
+    // Get the touch position relative to the top-left of the canvas
+    // When we get the raw values of pageX and pageY below, they take into account the scrolling on the page
+    // but not the position relative to our target div. We'll adjust them using "target.offsetLeft" and
+    // "target.offsetTop" to get the correct values in relation to the top left of the canvas.
+    function getTouchPos(e) {
+        if (!e)
+            var e = event;
+
+        if(e.touches) {
+            if (e.touches.length == 1) { // Only deal with one finger
+                var touch = e.touches[0]; // Get the information for finger #1
+                touchX=touch.pageX-touch.target.offsetLeft;
+                touchY=touch.pageY-touch.target.offsetTop;
+            }
+        }
+    }
+
+
+
+    // Set-up the canvas and add our event handlers after the page has loaded
+    function init() {
+		
+
+            // Grab elements, create settings, etc.
+ video = document.getElementById('video');
+
+// Get access to the camera!
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+    });
+}
+        // Get the specific canvas element from the HTML document
+        canvas = document.getElementById('sketchpad');
+
+        // If the browser supports the canvas tag, get the 2d drawing context for this canvas
+        if (canvas.getContext)
+            ctx = canvas.getContext('2d');
+
+        // Check that we have a valid context to draw on/with before adding event handlers
+        if (ctx) {
+            // React to mouse events on the canvas, and mouseup on the entire document
+            canvas.addEventListener('mousedown', sketchpad_mouseDown, false);
+            canvas.addEventListener('mousemove', sketchpad_mouseMove, false);
+            window.addEventListener('mouseup', sketchpad_mouseUp, false);
+
+            // React to touch events on the canvas
+            canvas.addEventListener('touchstart', sketchpad_touchStart, false);
+            canvas.addEventListener('touchmove', sketchpad_touchMove, false);
+        
+        }
+    }
+	
+
+</script>
+
+<style>
+	.square_custom {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+.circle_custom {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+}
+.triangle_custom {
+	width: 0px;
+	height: 0px;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid white;
+	position: absolute;
+}
+/* Some CSS styling */
+#sketchpadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.footer {
+  z-index: 2;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+#canvasHolder {
+    z-index: 1;
+    left: 0;
+    right: 0;
+    position: absolute;  
+}
+#sketchpad {
+   
+    height:800px;
+    width:600px;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+#videoHolder {
+    z-index: 0;
+    left: 0;
+    right: 0;
+    position:absolute;
+}
+#video {
+
+    height:800px;
+    width:600px;
+}
+#clearbutton {
+    
+    font-size: 15px;
+    padding: 10px;
+    -webkit-appearance: none;
+    background: #eee;
+    border: 1px solid #888;
+}
+</style>
+
+<body onload="init()">    
+	
+<div class="text-center">
+<div class="jumbotron">
+		<h1 class="display-4">Let the inner child artist loose...</h1>
+		<p class="lead">Create previews of you or your kiddo's work and download the latest preview as a png.</p>
+</div>
+
+  
+
+
+    </div>
+
+       <div class="container-fluid" id="art">
+        <div id="sketchpadapp">
+        <div id="videoHolder">
+            <video id="video" width="600" height="800" autoplay></video> 
+        </div>
+            <div id="canvasHolder">
+                <canvas id="sketchpad" height="800" width="600">
+                </canvas>
+            </div>
+ 
+</div>
+		   </div>
+	<div class="footer">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center">
+	    <div class="text-center">
+  	  <div class="btn-group" role="group">
+		             <input type="submit" value="Clear Sketchpad" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
+	        <input type="submit" value="Clear Shapes" id="clearAll" onclick="clearAll();">
+       
+		  
+    </div>
+	</div>
+    		</div>
+		</div>
+
+</body>
+
+</html>

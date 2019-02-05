@@ -18,7 +18,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 		$date = get_lastpostmodified( 'GMT' );
 		echo $date ? mysql2date( 'D, d M Y H:i:s +0000', $date ) : date( 'D, d M Y H:i:s +0000' );
 	?></lastBuildDate>
-	<docs>http://backend.userland.com/rss092</docs>
+	<docs>https://backend.userland.com/rss092</docs>
 	<language><?php bloginfo_rss( 'language' ); ?></language>
 
 	<?php

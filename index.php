@@ -39,10 +39,10 @@
 	
   <div class="container ">
     <div class="row">
-<div class="col-lg-4 col-sm-12 text-center col-lg-offset-4"><a href="http://www.danielhampikian.com"><img class="img-circle" alt="picture of me coding with a weird looking cat on my chest" style="width: 140px; height: 140px;" src="images/daniel/cat.jpg" data-holder-rendered="true"></a>
+<div class="col-lg-4 col-sm-12 text-center col-lg-offset-4"><a href="https://www.danielhampikian.com"><img class="img-circle" alt="picture of me coding with a weird looking cat on my chest" style="width: 140px; height: 140px;" src="images/daniel/cat.jpg" data-holder-rendered="true"></a>
   <h3>Daniel Hampikian</h3>
   <p>I have always wanted to help people improve their physical and mental wellbeing, and after studying computer science, philosophy, psychology, and neuroscience for many years, found that creating and teaching others to create software was an ideal way to help people become their best selves.  I began my career as an academic in philosophy, and became interested in minds and how they improve, degrade, and process emotions and information.  This led me to get my phd in philosophy and specialize in ethics and philosophy of mind.  After teaching for several years, I became interested in AI, and decided that the best way to acquire knowledge in this area was to learn how to create AI, so I retrained myself as a computer scientist both on my own and by taking computer science classes at BSU.  Eventually I found that I was most useful and fulfilled as a teacher teaching both technology and philosophy together, and found a place where that was welcomed in the GIMM department at Boise State University.  When I'm not being a professor, I enjoy creating songs with my band: <a 
-		href="http://danielhampikian.com/wordpress/">NeuroSoul  <img src="http://www.danielhampikian.com/wordpress/wp-content/uploads/2018/02/guitar_double-150x150.jpg" alt="HTML tutorial" style="width:30px;height:30px;border-radius: 50%; padding: 20px, 20px, 20px, 20px;">
+		href="https://www.danielhampikian.com/wordpress/">NeuroSoul  <img src="https://www.danielhampikian.com/wordpress/wp-content/uploads/2018/02/guitar_double-150x150.jpg" alt="HTML tutorial" style="width:30px;height:30px;border-radius: 50%; padding: 20px, 20px, 20px, 20px;">
 	  </a></p>
 </div>
 </div>
@@ -95,7 +95,7 @@
       <div class="col-xs-6 col-lg-4">
         <h3>QuoteSafe Introspection Loop</h3>
         <p> <em class="icon-desktop "></em>Build your own philosophy through an introspective feedback loop! &nbsp;This app saves profound thoughts from yourself or others and prompts you to reflect on those quotes. Your reflection itself becomes a new quote, and initially all quotes author attributions are hidden so that you are often reflecting on your own thoughts to deepen your personal philosophy. </p>
-        <p><a class="btn btn-default" href="http://www.danielhampikian.com">View details »</a></p>
+        <p><a class="btn btn-default" href="https://www.danielhampikian.com">View details »</a></p>
       </div>
       <div class="col-xs-6 col-lg-4">
         <h3>Workout Tower Defense (WTO)</h3>
@@ -108,12 +108,12 @@
             </div>
           </div>
         </div>
-<p><a class="btn btn-default" href="http://www.danielhampikian.com">View details »</a></p>
+<p><a class="btn btn-default" href="https://www.danielhampikian.com">View details »</a></p>
       </div>
      <div class="col-xs-6 col-lg-4">
         <h3>Emotional Feedback AI</h3>
         <p> <i class="icon-desktop "></i>An emotional AI... need I say more? This chatbot asks you questions about your emotions and values and develops an emotional profile of its own based on your answers and a random weighting to its emotion value set.</p>
-        <p><a class="btn btn-default" href="http://www.danielhampikian.com">View details »</a></p>
+        <p><a class="btn btn-default" href="https://www.danielhampikian.com">View details »</a></p>
       </div>
     </div>
   </div>

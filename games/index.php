@@ -52,6 +52,8 @@
         <h2>Games in Development</h2>
       </div>
     </div>
+	  
+	
     <div class="row">
       <div class="col-xs-6 col-lg-4">
         <h3>Space Owls and Dragonflies</h3>
@@ -67,9 +69,15 @@
 		
 		
 		<div class="col-xs-6 col-lg-4">
-        <h3>Square Circle</h3>
-        <p> <em class="icon-desktop "></em>A Javascript game to demonstrate how to manipulate, create, and remove css and html elements.  Randomly position squares and circles on a canvas, then delete the ones you don't want. </p>
-        <p><a class="btn btn-default" href="squareCircle/squarecircle.html"><img class="img-circle" alt="buttefly picture" style="width: 200px; height: 200px;" src="../images/squareCircle.jpeg" data-holder-rendered="true"></a></p>
+        <h3>Abstract Art Generator</h3>
+        <p> <em class="icon-desktop "></em>A Bootstrap and Javascript abstract art generating game to demonstrate how to manipulate, create, and remove css and html elements. Save and download your art from the browser. </p>
+        <p><a class="btn btn-default" href="squareCircle/index.html"><img class="img-circle" alt="buttefly picture" style="width: 200px; height: 200px;" src="../images/squareCircle.jpeg" data-holder-rendered="true"></a></p>
+      </div>
+		
+		<div class="col-xs-6 col-lg-4">
+        <h3>Aurelia's Canvas</h3>
+        <p> <em class="icon-desktop "></em>A game for adorable children who like to grab phones </p>
+        <p><a class="btn btn-default" href="aurelia/index.html"><img class="img-circle" alt="buttefly picture" style="width: 200px; height: 200px;" src="../images/aurelia.jpg" data-holder-rendered="true"></a></p>
       </div>
   <!-- / CONTAINER--> 
 </section>

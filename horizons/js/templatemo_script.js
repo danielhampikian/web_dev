@@ -2,7 +2,7 @@
 
 /* 
 Dragonfruit Template 
-http://www.templatemo.com/preview/templatemo_411_dragonfruit 
+https://www.templatemo.com/preview/templatemo_411_dragonfruit 
 */
 
 jQuery(function(){

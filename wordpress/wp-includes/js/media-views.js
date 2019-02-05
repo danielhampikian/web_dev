@@ -5362,7 +5362,7 @@ Embed = Select.extend(/** @lends wp.media.view.Toolbar.Embed.prototype */{
 
 	refresh: function() {
 		var url = this.controller.state().props.get('url');
-		this.get('select').model.set( 'disabled', ! url || url === 'http://' );
+		this.get('select').model.set( 'disabled', ! url || url === 'https://' );
 		/**
 		 * call 'refresh' directly on the parent class
 		 */
@@ -8064,7 +8064,7 @@ AttachmentDisplay = Settings.extend(/** @lends wp.media.view.Settings.Attachment
 			} else if ( 'file' === linkTo ) {
 				$input.val( attachment.get('url') );
 			} else if ( ! this.model.get('linkUrl') ) {
-				$input.val('http://');
+				$input.val('https://');
 			}
 
 			$input.prop( 'readonly', 'custom' !== linkTo );
@@ -8548,7 +8548,7 @@ EmbedUrl = View.extend(/** @lends wp.media.view.EmbedUrl.prototype */{
 			return;
 		}
 
-		this.input.value = this.model.get('url') || 'http://';
+		this.input.value = this.model.get('url') || 'https://';
 		/**
 		 * Call `render` directly on parent class with passed arguments
 		 */
@@ -8614,7 +8614,7 @@ EmbedLink = wp.media.view.Settings.extend(/** @lends wp.media.view.EmbedLink.pro
 		this.$( '.setting' ).hide();
 
 		// only proceed with embed if the field contains more than 11 characters
-		// Example: http://a.io is 11 chars
+		// Example: https://a.io is 11 chars
 		if ( url && ( url.length < 11 || ! url.match(/^http(s)?:\/\//) ) ) {
 			return;
 		}

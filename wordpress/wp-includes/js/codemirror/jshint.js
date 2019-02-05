@@ -40,11 +40,11 @@ var arr = str.split(',').map(function(code) {
 });
 module.exports = arr;
 },{}],4:[function(require,module,exports){
-// http://wiki.commonjs.org/wiki/Unit_Testing/1.0
+// https://wiki.commonjs.org/wiki/Unit_Testing/1.0
 //
 // THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
 //
-// Originally from narwhal.js (http://narwhaljs.org)
+// Originally from narwhal.js (https://narwhaljs.org)
 // Copyright (c) 2009 Thomas Robinson <280north.com>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -948,7 +948,7 @@ function inspect(obj, opts) {
 exports.inspect = inspect;
 
 
-// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+// https://en.wikipedia.org/wiki/ANSI_escape_code#graphics
 inspect.colors = {
   'bold' : [1, 22],
   'italic' : [3, 23],
@@ -1039,7 +1039,7 @@ function formatValue(ctx, value, recurseTimes) {
   }
 
   // IE doesn't make error fields non-enumerable
-  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+  // https://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
   if (isError(value)
       && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
     return formatError(value);
@@ -1488,8 +1488,8 @@ function now() {
  * @license
  * lodash 3.7.0 (Custom Build) <https://lodash.com/>
  * Build: `lodash modern -d -o ./index.js`
- * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
- * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright 2012-2015 The Dojo Foundation <https://dojofoundation.org/>
+ * Based on Underscore.js 1.8.3 <https://underscorejs.org/LICENSE>
  * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <https://lodash.com/license>
  */
@@ -1579,7 +1579,7 @@ function now() {
       rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\n\\]|\\.)*?)\2)\]/g;
 
   /**
-   * Used to match `RegExp` [special characters](http://www.regular-expressions.info/characters.html#special).
+   * Used to match `RegExp` [special characters](https://www.regular-expressions.info/characters.html#special).
    * In addition to special characters the forward slash is escaped to allow for
    * easier `eval` use and `Function` compilation.
    */
@@ -8955,7 +8955,7 @@ function now() {
      *
      * This method differs from `_.bind` by allowing bound functions to reference
      * methods that may be redefined or don't yet exist.
-     * See [Peter Michaux's article](http://peter.michaux.ca/articles/lazy-function-definition-pattern)
+     * See [Peter Michaux's article](https://peter.michaux.ca/articles/lazy-function-definition-pattern)
      * for more details.
      *
      * The `_.bindKey.placeholder` value, which defaults to `_` in monolithic
@@ -9095,7 +9095,7 @@ function now() {
      * on the trailing edge of the timeout only if the the debounced function is
      * invoked more than once during the `wait` timeout.
      *
-     * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
+     * See [David Corbacho's article](https://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
      * for details over the differences between `_.debounce` and `_.throttle`.
      *
      * @static
@@ -9668,7 +9668,7 @@ function now() {
      * on the trailing edge of the timeout only if the the throttled function is
      * invoked more than once during the `wait` timeout.
      *
-     * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
+     * See [David Corbacho's article](https://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
      * for details over the differences between `_.throttle` and `_.debounce`.
      *
      * @static
@@ -9750,7 +9750,7 @@ function now() {
      * `thisArg` and invoked with two argument; (value [, index|key, object]).
      *
      * **Note:** This method is loosely based on the
-     * [structured clone algorithm](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm).
+     * [structured clone algorithm](https://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm).
      * The enumerable properties of `arguments` objects and objects created by
      * constructors other than `Object` are cloned to plain `Object` objects. An
      * empty object is returned for uncloneable values such as functions, DOM nodes,
@@ -9813,7 +9813,7 @@ function now() {
      * and invoked with two argument; (value [, index|key, object]).
      *
      * **Note:** This method is loosely based on the
-     * [structured clone algorithm](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm).
+     * [structured clone algorithm](https://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm).
      * The enumerable properties of `arguments` objects and objects created by
      * constructors other than `Object` are cloned to plain `Object` objects. An
      * empty object is returned for uncloneable values such as functions, DOM nodes,
@@ -11674,7 +11674,7 @@ function now() {
      * [#133](https://html5sec.org/#133) of the [HTML5 Security Cheatsheet](https://html5sec.org/)
      * for more details.
      *
-     * When working with HTML you should always [quote attribute values](http://wonko.com/post/html-escaping)
+     * When working with HTML you should always [quote attribute values](https://wonko.com/post/html-escaping)
      * to reduce XSS vectors.
      *
      * @static
@@ -11994,7 +11994,7 @@ function now() {
      * object is provided it takes precedence over `_.templateSettings` values.
      *
      * **Note:** In the development build `_.template` utilizes
-     * [sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)
+     * [sourceURLs](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)
      * for easier debugging.
      *
      * For more information on precompiling templates see
@@ -12083,7 +12083,7 @@ function now() {
      * ');
      */
     function template(string, options, otherOptions) {
-      // Based on John Resig's `tmpl` implementation (http://ejohn.org/blog/javascript-micro-templating/)
+      // Based on John Resig's `tmpl` implementation (https://ejohn.org/blog/javascript-micro-templating/)
       // and Laura Doktorova's doT.js (https://github.com/olado/doT).
       var settings = lodash.templateSettings;
 
@@ -13624,7 +13624,7 @@ function now() {
   if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
     // Expose lodash to the global object when an AMD loader is present to avoid
     // errors in cases where lodash is loaded by a script tag and not intended
-    // as an AMD module. See http://requirejs.org/docs/errors.html#mismatch for
+    // as an AMD module. See https://requirejs.org/docs/errors.html#mismatch for
     // more details.
     root._ = _;
 
@@ -15809,7 +15809,7 @@ var warnings = {
   W122: "Invalid typeof value '{a}'",
   W123: "'{a}' is already defined in outer scope.",
   W124: "A generator function should contain at least one yield expression.",
-  W125: "This line contains non-breaking spaces: http://jshint.com/docs/options/#nonbsp",
+  W125: "This line contains non-breaking spaces: https://jshint.com/docs/options/#nonbsp",
   W126: "Unnecessary grouping operator.",
   W127: "Unexpected use of a comma operator.",
   W128: "Empty array elements require elision=true.",
@@ -15985,7 +15985,7 @@ exports.bool = {
      * lead to some unexpected results. The latter don't do any coercion so
      * they are generally safer. If you would like to learn more about type
      * coercion in JavaScript, we recommend [Truth, Equality and
-     * JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/)
+     * JavaScript](https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/)
      * by Angus Croll.
      */
     eqeqeq      : true,
@@ -16010,7 +16010,7 @@ exports.bool = {
 
     /**
      * This option enables syntax first defined in [the ECMAScript 5.1
-     * specification](http://es5.github.io/). This includes allowing reserved
+     * specification](https://es5.github.io/). This includes allowing reserved
      * keywords as object properties.
      *
      * @deprecated Use `esversion: 5` instead.
@@ -16033,7 +16033,7 @@ exports.bool = {
      *
      * For more in-depth understanding of `for in` loops in JavaScript, read
      * [Exploring JavaScript for-in
-     * loops](http://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/)
+     * loops](https://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/)
      * by Angus Croll.
      */
     forin       : true,
@@ -16175,10 +16175,10 @@ exports.bool = {
      * array or object literal. Due to bugs in old versions of IE, trailing
      * commas used to be discouraged, but since ES5 their semantics were
      * standardized. (See
-     * [#11.1.4](http://www.ecma-international.org/ecma-262/5.1/#sec-11.1.4) and
-     * [#11.1.5](http://www.ecma-international.org/ecma-262/5.1/#sec-11.1.5).)
+     * [#11.1.4](https://www.ecma-international.org/ecma-262/5.1/#sec-11.1.4) and
+     * [#11.1.5](https://www.ecma-international.org/ecma-262/5.1/#sec-11.1.5).)
      * Now, they help to prevent the same [visual
-     * ambiguities](http://www.ecma-international.org/ecma-262/5.1/#sec-7.9.2)
+     * ambiguities](https://www.ecma-international.org/ecma-262/5.1/#sec-7.9.2)
      * that the strict usage of semicolons helps prevent.
      *
      * For example, this code might have worked last Tuesday:
@@ -16222,9 +16222,9 @@ exports.bool = {
      *
      * For more information about semicolons in JavaScript read [An Open Letter
      * to JavaScript Leaders Regarding
-     * Semicolons](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
+     * Semicolons](https://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
      * by Isaac Schlueter and [JavaScript Semicolon
-     * Insertion](http://inimino.org/~inimino/blog/javascript_semicolons).
+     * Insertion](https://inimino.org/~inimino/blog/javascript_semicolons).
      */
     asi         : true,
 
@@ -16432,7 +16432,7 @@ exports.bool = {
      * More info:
      *
      * * [with Statement Considered
-     *   Harmful](http://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/)
+     *   Harmful](https://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/)
      */
     withstmt    : true,
 
@@ -16515,7 +16515,7 @@ exports.bool = {
      * More info:
      *
      * * [Specification for ECMAScript
-     *   6](http://www.ecma-international.org/ecma-262/6.0/index.html)
+     *   6](https://www.ecma-international.org/ecma-262/6.0/index.html)
      *
      * @deprecated Use `esversion: 6` instead.
      */
@@ -16533,13 +16533,13 @@ exports.bool = {
 
     /**
      * This option defines globals exposed by the
-     * [MooTools](http://mootools.net/) JavaScript framework.
+     * [MooTools](https://mootools.net/) JavaScript framework.
      */
     mootools    : true,
 
     /**
      * This option defines globals exposed by
-     * [CouchDB](http://couchdb.apache.org/). CouchDB is a document-oriented
+     * [CouchDB](https://couchdb.apache.org/). CouchDB is a document-oriented
      * database that can be queried and indexed in a MapReduce fashion using
      * JavaScript.
      */
@@ -16552,14 +16552,14 @@ exports.bool = {
     jasmine     : true,
 
     /**
-     * This option defines globals exposed by the [jQuery](http://jquery.com/)
+     * This option defines globals exposed by the [jQuery](https://jquery.com/)
      * JavaScript library.
      */
     jquery      : true,
 
     /**
      * This option defines globals available when your code is running inside
-     * of the Node runtime environment. [Node.js](http://nodejs.org/) is a
+     * of the Node runtime environment. [Node.js](https://nodejs.org/) is a
      * server-side JavaScript environment that uses an asynchronous
      * event-driven model. This option also skips some warnings that make sense
      * in the browser environments but don't make sense in Node such as
@@ -16569,38 +16569,38 @@ exports.bool = {
 
     /**
      * This option defines globals exposed by [the QUnit unit testing
-     * framework](http://qunitjs.com/).
+     * framework](https://qunitjs.com/).
      */
     qunit       : true,
 
     /**
      * This option defines globals available when your code is running inside
-     * of the Rhino runtime environment. [Rhino](http://www.mozilla.org/rhino/)
+     * of the Rhino runtime environment. [Rhino](https://www.mozilla.org/rhino/)
      * is an open-source implementation of JavaScript written entirely in Java.
      */
     rhino       : true,
 
     /**
      * This option defines globals exposed by [the ShellJS
-     * library](http://documentup.com/arturadib/shelljs).
+     * library](https://documentup.com/arturadib/shelljs).
      */
     shelljs     : true,
 
     /**
      * This option defines globals exposed by the
-     * [Prototype](http://www.prototypejs.org/) JavaScript framework.
+     * [Prototype](https://www.prototypejs.org/) JavaScript framework.
      */
     prototypejs : true,
 
     /**
-     * This option defines globals exposed by the [YUI](http://yuilibrary.com/)
+     * This option defines globals exposed by the [YUI](https://yuilibrary.com/)
      * JavaScript framework.
      */
     yui         : true,
 
     /**
      * This option defines globals exposed by the "BDD" and "TDD" UIs of the
-     * [Mocha unit testing framework](http://mochajs.org/).
+     * [Mocha unit testing framework](https://mochajs.org/).
      */
     mocha       : true,
 
@@ -16613,7 +16613,7 @@ exports.bool = {
     /**
      * This option defines globals available when your code is running as a
      * script for the [Windows Script
-     * Host](http://en.wikipedia.org/wiki/Windows_Script_Host).
+     * Host](https://en.wikipedia.org/wiki/Windows_Script_Host).
      */
     wsh         : true,
 
@@ -16643,7 +16643,7 @@ exports.bool = {
 
     /**
      * This option defines globals available when using [the Browserify
-     * tool](http://browserify.org/) to build a project.
+     * tool](https://browserify.org/) to build a project.
      */
     browserify  : true,
 
@@ -16657,7 +16657,7 @@ exports.bool = {
 
     /**
      * This option defines globals exposed by the [Dojo
-     * Toolkit](http://dojotoolkit.org/).
+     * Toolkit](https://dojotoolkit.org/).
      */
     dojo        : true,
 
@@ -16673,7 +16673,7 @@ exports.bool = {
 
     /**
      * This option defines globals available when your core is running inside
-     * of the PhantomJS runtime environment. [PhantomJS](http://phantomjs.org/)
+     * of the PhantomJS runtime environment. [PhantomJS](https://phantomjs.org/)
      * is a headless WebKit scriptable with a JavaScript API. It has fast and
      * native support for various web standards: DOM handling, CSS selector,
      * JSON, Canvas, and SVG.
@@ -16746,7 +16746,7 @@ exports.val = {
    * environments.
    *
    * To configure `globals` within an individual file, see [Inline
-   * Configuration](http://jshint.com/docs/#inline-configuration).
+   * Configuration](https://jshint.com/docs/#inline-configuration).
    */
   globals      : false,
 
@@ -16831,7 +16831,7 @@ exports.val = {
    * This option lets you control cyclomatic complexity throughout your code.
    * Cyclomatic complexity measures the number of linearly independent paths
    * through a program's source code. Read more about [cyclomatic complexity on
-   * Wikipedia](http://en.wikipedia.org/wiki/Cyclomatic_complexity).
+   * Wikipedia](https://en.wikipedia.org/wiki/Cyclomatic_complexity).
    */
   maxcomplexity: false,
 
@@ -16905,7 +16905,7 @@ exports.val = {
    *
    * For more in-depth understanding of scoping and hoisting in JavaScript,
    * read [JavaScript Scoping and
-   * Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting)
+   * Hoisting](https://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting)
    * by Ben Cherry.
    */
   latedef      : false,
@@ -16926,10 +16926,10 @@ exports.val = {
    *    in older browsers—such as Internet Explorer 6/7/8/9—and other legacy
    *    JavaScript environments
    *  - `5` - To enable syntax first defined in [the ECMAScript 5.1
-   *    specification](http://www.ecma-international.org/ecma-262/5.1/index.html).
+   *    specification](https://www.ecma-international.org/ecma-262/5.1/index.html).
    *    This includes allowing reserved keywords as object properties.
    *  - `6` - To tell JSHint that your code uses [ECMAScript
-   *    6](http://www.ecma-international.org/ecma-262/6.0/index.html) specific
+   *    6](https://www.ecma-international.org/ecma-262/6.0/index.html) specific
    *    syntax. Note that not all browsers implement them.
    */
   esversion: 5
@@ -20183,12 +20183,12 @@ var JSHINT = (function() {
     // E4X extended the `typeof` operator to return "xml" for the XML and
     // XMLList types it introduced.
     // Ref: 11.3.2 The typeof Operator
-    // http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-357.pdf
+    // https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-357.pdf
     "xml",
     // IE<9 reports "unknown" when the `typeof` operator is applied to an
     // object existing across a COM+ bridge. In lieu of official documentation
     // (which does not exist), see:
-    // http://robertnyman.com/2005/12/21/what-is-typeof-unknown/
+    // https://robertnyman.com/2005/12/21/what-is-typeof-unknown/
     "unknown"
   ];
   typeofValues.es3 = [

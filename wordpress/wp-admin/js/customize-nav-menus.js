@@ -545,7 +545,7 @@
 
 			/*
 			 * Allow URLs including:
-			 * - http://example.com/
+			 * - https://example.com/
 			 * - //example.com
 			 * - /directory/
 			 * - ?query-param
@@ -576,7 +576,7 @@
 			this.currentMenuControl.addItemToMenu( menuItem );
 
 			// Reset the custom link form.
-			itemUrl.val( 'http://' );
+			itemUrl.val( 'https://' );
 			itemName.val( '' );
 		},
 

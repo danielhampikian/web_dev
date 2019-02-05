@@ -746,14 +746,14 @@ function _http_build_query( $data, $prefix = null, $sep = null, $key = '', $urle
  *
  * Using a single key and value:
  *
- *     add_query_arg( 'key', 'value', 'http://example.com' );
+ *     add_query_arg( 'key', 'value', 'https://example.com' );
  *
  * Using an associative array:
  *
  *     add_query_arg( array(
  *         'key1' => 'value1',
  *         'key2' => 'value2',
- *     ), 'http://example.com' );
+ *     ), 'https://example.com' );
  *
  * Omitting the URL from either use results in the current URL being used
  * (the value of `$_SERVER['REQUEST_URI']`).
@@ -792,8 +792,8 @@ function add_query_arg() {
 	else
 		$frag = '';
 
-	if ( 0 === stripos( $uri, 'http://' ) ) {
-		$protocol = 'http://';
+	if ( 0 === stripos( $uri, 'https://' ) ) {
+		$protocol = 'https://';
 		$uri = substr( $uri, 7 );
 	} elseif ( 0 === stripos( $uri, 'https://' ) ) {
 		$protocol = 'https://';
@@ -2754,7 +2754,7 @@ function _default_wp_die_handler( $message, $title = '', $args = array() ) {
 			$text_direction = 'rtl';
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" <?php if ( function_exists( 'language_attributes' ) && function_exists( 'is_rtl' ) ) language_attributes(); else echo "dir='$text_direction'"; ?>>
+<html xmlns="https://www.w3.org/1999/xhtml" <?php if ( function_exists( 'language_attributes' ) && function_exists( 'is_rtl' ) ) language_attributes(); else echo "dir='$text_direction'"; ?>>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width">
@@ -3767,7 +3767,7 @@ function dead_db() {
 	header( 'Content-Type: text/html; charset=utf-8' );
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"<?php if ( is_rtl() ) echo ' dir="rtl"'; ?>>
+<html xmlns="https://www.w3.org/1999/xhtml"<?php if ( is_rtl() ) echo ' dir="rtl"'; ?>>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><?php _e( 'Database Error' ); ?></title>
@@ -4344,7 +4344,7 @@ function wp_guess_url() {
 			}
 		}
 
-		$schema = is_ssl() ? 'https://' : 'http://'; // set_url_scheme() is not defined yet
+		$schema = is_ssl() ? 'https://' : 'https://'; // set_url_scheme() is not defined yet
 		$url = $schema . $_SERVER['HTTP_HOST'] . $path;
 	}
 
@@ -5292,7 +5292,7 @@ function wp_auth_check_load() {
  */
 function wp_auth_check_html() {
 	$login_url = wp_login_url();
-	$current_domain = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'];
+	$current_domain = ( is_ssl() ? 'https://' : 'https://' ) . $_SERVER['HTTP_HOST'];
 	$same_domain = ( strpos( $login_url, $current_domain ) === 0 );
 
 	/**

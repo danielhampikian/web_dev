@@ -21,7 +21,7 @@ Section 002: Wednesday 11:55am - 2:40pm <br>
 Instructor: Dr. Daniel Hampikian <br>
 Office Hours: By appointment only <br>
 Email: danielhampikian@boisestate.edu <br>
-Website: http://www.danielhampikian.com/ <br>
+Website: https://www.danielhampikian.com/ <br>
 <br>
 Books <br>
 <br>

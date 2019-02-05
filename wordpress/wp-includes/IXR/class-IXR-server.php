@@ -49,7 +49,7 @@ class IXR_Server
 
             global $HTTP_RAW_POST_DATA;
             if (empty($HTTP_RAW_POST_DATA)) {
-                // workaround for a bug in PHP 5.2.2 - http://bugs.php.net/bug.php?id=41293
+                // workaround for a bug in PHP 5.2.2 - https://bugs.php.net/bug.php?id=41293
                 $data = file_get_contents('php://input');
             } else {
                 $data =& $HTTP_RAW_POST_DATA;
@@ -166,15 +166,15 @@ EOD;
         // Initialises capabilities array
         $this->capabilities = array(
             'xmlrpc' => array(
-                'specUrl' => 'http://www.xmlrpc.com/spec',
+                'specUrl' => 'https://www.xmlrpc.com/spec',
                 'specVersion' => 1
         ),
             'faults_interop' => array(
-                'specUrl' => 'http://xmlrpc-epi.sourceforge.net/specs/rfc.fault_codes.php',
+                'specUrl' => 'https://xmlrpc-epi.sourceforge.net/specs/rfc.fault_codes.php',
                 'specVersion' => 20010516
         ),
             'system.multicall' => array(
-                'specUrl' => 'http://www.xmlrpc.com/discuss/msgReader$1208',
+                'specUrl' => 'https://www.xmlrpc.com/discuss/msgReader$1208',
                 'specVersion' => 1
         ),
         );
@@ -201,7 +201,7 @@ EOD;
 
     function multiCall($methodcalls)
     {
-        // See http://www.xmlrpc.com/discuss/msgReader$1208
+        // See https://www.xmlrpc.com/discuss/msgReader$1208
         $return = array();
         foreach ($methodcalls as $call) {
             $method = $call['methodName'];

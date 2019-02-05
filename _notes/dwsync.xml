@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.php" server="54.243.18.114//var/www/html/" local="131638144176960398" remote="131638144250000000" Dst="1" />
-<file name="header.php" server="54.243.18.114//var/www/html/" local="131647457855617977" remote="131647458030000000" Dst="1" />
-<file name="nav.php" server="54.243.18.114//var/www/html/" local="131651018696819182" remote="131651018710000000" Dst="1" />
-<file name="footer.php" server="54.243.18.114//var/www/html/" local="131343654210000000" remote="131343654210000000" Dst="1" />
-<file name="header.php" server="C:/MAMP/htdocs/" local="131647457855617977" remote="131647457850000000" Dst="1" />
+<file name="index.php" server="54.243.18.114//var/www/html/" local="131920722847399683" remote="131920720940000000" Dst="1" />
+<file name="header.php" server="54.243.18.114//var/www/html/" local="131920722547075245" remote="131920720910000000" Dst="1" />
+<file name="nav.php" server="54.243.18.114//var/www/html/" local="131920751861885047" remote="131920751410000000" Dst="1" />
+<file name="footer.php" server="54.243.18.114//var/www/html/" local="131920722010000000" remote="131920720910000000" Dst="1" />
+<file name="header.php" server="C:/MAMP/htdocs/" local="131920722547075245" remote="131920722540000000" Dst="1" />
 <file name="index.php" server="C:/MAMP/htdocs/" local="131649255798925389" remote="131649255790000000" Dst="1" />
-<file name="nav.php" server="C:/MAMP/htdocs/" local="131650193071198304" remote="131650193070000000" Dst="1" />
+<file name="nav.php" server="C:/MAMP/htdocs/" local="131920751861885047" remote="131920751860000000" Dst="1" />
+<file name="footer.php" server="C:/MAMP/htdocs/" local="131920722010000000" remote="131920722010000000" Dst="1" />
 </dwsync>

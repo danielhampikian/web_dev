@@ -2,7 +2,7 @@
 /**
  * WordPress DB Class
  *
- * Original code from {@link http://php.justinvincent.com Justin Vincent (justin@visunet.ie)}
+ * Original code from {@link https://php.justinvincent.com Justin Vincent (justin@visunet.ie)}
  *
  * @package WordPress
  * @subpackage Database
