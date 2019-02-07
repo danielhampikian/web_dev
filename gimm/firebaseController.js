@@ -4,6 +4,13 @@
 //var userId = firebase.auth().currentUser.uid; //global var to track user by unique id
 var locationsArray;
 
+function writeUserLocation(userInfo, lat, lon) {
+  firebase.database().ref('locations/' + userInfo).set({
+    latitude: lat,
+    longitude: lon
+  });
+}
+
 function testWrite(){
 	this.writeUserData("this", "is", "a", "test");
 }
@@ -16,12 +23,7 @@ function writeUserData(userId, name, email, imageUrl) {
     profile_picture : imageUrl
   });
 }
-function writeUserLocation(userInfo, lat, lon) {
-  firebase.database().ref('locations/' + userInfo).set({
-    latitude: lat,
-    longitude: lon
-  });
-}
+
 var locationsRef = firebase.database().ref('locations/');
 locationsRef.on('value', function(snapshot) {
   snapshotToArray(snapshot);
