@@ -10,8 +10,22 @@
 		<br>
 		<br>
 		<br>
-	<h1>SCP Syntax Examples</h1>
+		<h1>Command line basic commands:</h1>
+		<h2>Basic commands on a command line whther on a mac terminal or a mobaxterm like ssh client connected to a linux instance of an ec2 (or just a linux) are as follows:</h2>
+		<h3>To move around the file system: type 'cd ..' to move up a directory, or 'cd directory_name_like_home' to move down into a directory'</h3>
+		<h3>List the directories and files available at the location that your command line is at with 'ls' or 'ls -a' and see your current location in the file structure with 'pwd'</h3>
+		<h3>To edit a file, type 'vim filename' or 'nano filename' Both vim and nano are file editors.  Once inside the file, to make changes in vim type 'i' to enter insert mode, make your changes, then type 'escape key' to exit insert mode, and ':wq' then enter to write your changes and quit.  Note you may need to use sudo vim or sudo nano to make changes to certain files.  With nano you can already edit once inside the file, type 'ctrl key + o' to write your changes, then 'ctrl key + x' to exit nano (the instructions for using nano appear at the bottom of the editor</h3>
+		<h3>The sudo command gives you root admin privileges and allows you to make changes to file that require that access.  You often need sudo to edit files and perform updates or install things like 'sudo yum install httpd' for example, or 'sudo vim wp-config.php'</h3>
+		<h3>Make sure you disconnect by typing 'logout' or closing your session in mobaxterm or a mac terminal after you are done modifying your ec2 instance, you can be charged for keeping a session open for long periods of time</h3>
+		<br>
+		<br>
 	
+	<h1>Connecting with a mac</h1>
+		<h2> Open a terminal with the command key and space typing terminal </h2>
+		<h2>In your terminal, using cd 'path/to/key' navivgate to your key.pem file, and use: 'chmod 400 my-key-pair.pem' to change permissions to private</h2>
+		<h2>Once terminal is open type: ssh -i /Users/whatever/path/to/your/pemfile.pem ec2-user@public_dns_name_like_ec2-54-152-217-151.compute-1.amazonaws.com</h2>
+		<h2>At this point you're connected just like a user connecting with an ssh client like mobaxterm or putty, and can follow the tutorials linked to on my home page from there to set up wordpress and bootstrap websites on aws ec2 except that when you transfer files you will use the scp command as follows from a terminal: </h2>
+	<h2>SCP Syntax Examples</h2>
 
 	<h3>What is Secure Copy?</h3>
 	<h4>scp allows files to be copied to, from, or between different hosts.  It uses ssh for data transfer and provides the same authentication and same level of security as ssh</h4>.
