@@ -21,7 +21,9 @@ body {
 	border-right: 40px solid transparent;
 	border-bottom: 40px solid white;
 	position: absolute;
+	rotation: 180deg;
 }
+
 #art {
 	width: 800px;
 	height: 400px;

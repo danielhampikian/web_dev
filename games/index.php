@@ -21,7 +21,7 @@
   </div>
 
 <!-- / HEADER --> 
-	<div id="banner"><img class="center-block" src="../images/catGames.jpg" width="400" height="400" alt="guitar playing picture of Daniel Hampikian" /></div>
+	<div id="banner"><img class="center-block" src="../images/contemplative.jpg" width="400" height="400" alt="guitar playing picture of Daniel Hampikian" /></div>
 
 <!--  SECTION-1 -->
 <section>
@@ -29,7 +29,7 @@
   <div class="container ">
     <div class="row">
 <div class="col-lg-4 col-sm-12 text-center col-lg-offset-4">
-  <h3>Mrowr the Cat Critic</h3>
+  <h3>Games in Development:</h3>
   
 </div>
 </div>
@@ -49,7 +49,7 @@
     <div class="row">
       <div class="col-lg-12 page-header text-center">
       <a id="projects"></a>
-        <h2>Games in Development</h2>
+        <h2>Games in Development:</h2>
       </div>
     </div>
 	  

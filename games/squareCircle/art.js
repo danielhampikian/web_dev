@@ -1,24 +1,18 @@
 var maxZ = 1000;
 var shapeMaxD = 40;
-var shapeMinD = 20;
+var shapeMinD = 40;
 var canvasW = 740;
 var canvasH = 340;
 
 var getCanvas;
 var timer;
+var timerArray = [];
+var xy = {x: -1, y:-1};
 
-$("#prevImg").on('click', function () {
-	html2canvas(document.querySelector("#art")).then(canvas => {
-		document.body.appendChild(canvas);
-		getCanvas = canvas;
-	});
-});
-
-$("#convImg").on('click', function () {
-	var imageData = getCanvas.toDataURL("image/png");
-	var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
-	$("#convImg").attr("download", "image.png").attr("href", newData);
-});
+//TODO: color picker pallette for shapes
+//TODO: limited delta for gradient between color of shapes
+//TODO: Triangles pointing every direction
+//TODO: AR!!!
 
 window.onload = function() {
 
@@ -34,15 +28,89 @@ window.onload = function() {
 	start.onclick = timedArtStart;
 	var stop = document.getElementById("stop");
 	stop.onclick = timedArtStop;
+	var startAnim = document.getElementById("startAnim");
+	startAnim.onclick = startAnimation;
+	var stopAnim = document.getElementById("stopAnim");
+	stopAnim.onclick = stopAnimation;
 };
 function timedArtStart() {
 	timer = setInterval(function(){ generateRandom() }, 1000);
+	timerArray.push(timer);
 }
 
 function timedArtStop() {
-    clearInterval(timer);
+	timerArray.forEach(function(elem){
+		clearInterval(elem);
+	});
+	timerArray = [];
 }
+function startAnimation() {
+	timer = setInterval(function(){ moveRandom() }, 10);
+	timerArray.push(timer);
+}
+function stopAnimation(){
+		timerArray.forEach(function(elem){
+		clearInterval(elem);
+	});
+	timerArray = [];
+}
+function moveRandom(){
+	
+	var artArea = document.getElementById("art");
+	var shapes = artArea.getElementsByTagName("div");
+	for (let i = shapes.length - 1; i >= 0; i--) {
+		getRandomDir();
+		//console.log("xy.x value is: " + xy.x + " xy.y value is: " + xy.y);
+		var oldXPos = parseInt(shapes[i].style.left);
+		var newXPos = oldXPos + parseInt(xy.x) * 3;
+		var oldYPos = parseInt(shapes[i].style.top);
+		var newYPos = oldYPos + parseInt(xy.y) * 3;
+		newXPos += "px";
+		newYPos += "px";
+		shapes[i].style.top = newYPos;
+		shapes[i].style.left = newXPos;
+	}
 
+}
+function getRandomRotation(){
+	var rot = parseInt(Math.random() * 360);
+	var rotString = "rotate(";
+	rotString += rot;
+	rotString +="deg)";
+	console.log("degree to rotate string: " + rotString);
+	return rotString;
+}
+function getRandomDir(){
+	var dir = parseInt(Math.random() * 2);
+	var neg = parseInt(Math.random() * 2);
+	var changeDir = parseInt(Math.random()*7);
+	if (changeDir != 0) {
+		return;
+	}
+		
+	else {
+		switch(dir) {
+			case 0:
+				if(neg == 0){
+					xy.x = -1;
+				}
+				if(neg == 1){
+					xy.x = 1;
+				}
+				break;
+			case 1: 
+				if(neg == 0){
+					xy.y = -1;
+				}
+				if(neg == 1){
+					xy.y = 1;
+				}
+					break;
+				default:
+				break;
+		}
+	}
+}
 
 function generateRandom() {
 	var shape = (parseInt(Math.random()*3));
@@ -119,6 +187,8 @@ function addTriangle(){
 	triangle.style.borderRight = randB + " solid transparent";
 	triangle.style.borderLeft = randB + " solid transparent";
 	triangle.style.borderBottom = randB + " solid " + randC;
+	
+	triangle.style.transform = getRandomRotation();
 	triangle.onclick = frontClick;
 	var artArea = document.getElementById("art");
 	artArea.appendChild(triangle);
@@ -144,3 +214,17 @@ function getRandomColor() {
 	}
 	return result;
 }
+
+$("#prevImg").on('click', function () {
+	html2canvas(document.querySelector("#art")).then(canvas => {
+		document.body.appendChild(canvas);
+		getCanvas = canvas;
+	});
+});
+
+$("#convImg").on('click', function () {
+	var imageData = getCanvas.toDataURL("image/png");
+	var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
+	$("#convImg").attr("download", "image.png").attr("href", newData);
+});
+

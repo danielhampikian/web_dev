@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Dev Info</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="background"></div>
+	<div class="topnav">
+        <a href=index.html>home</a>
+		<a href=page1.html>css</a>
+		<a href=page2.html>js</a>
+
+    </div>
+    
+    <div class="header">
+		<h1>JS Info and Examples</h1>
+		<h4>Javascript has the power to dynamically change html and css</h4>
+    </div>
+    <h3>Below is an example of javascript taking input, using it in a function, and changing an html element based on input</h3>
+    <h4>When a web page is loaded, the browser creates a Document, Object Model or HTML DOM of the page</h4>
+    <div class="column side">
+    <p>Once the browser has loaded the DOM, javascript can change, remove, add, react or create any:</p>
+    <ul>
+        <li>html element</li>
+        <li>html attribute</li>
+        <li>css style</li>
+        <li>html events</li>
+    </ul>
+    </div>
+
+    <div class="column center">
+        <h3>For example</h3>
+        <h4>Let us create then change an element below</h4>
+        <p>Random Value in Range is: </p>
+        <p id="randomVal">Button not yet pressed</p>
+
+    </div>
+    <div class="column side">
+        <p>First, enter a positive number below</p>
+        <input type="text" id="num">
+        
+        <button id="enter" onclick="randomize()">Enter</button>
+        <button id="change" onclick="randomize()">Change</button>
+
+    </div>
+<br>    
+<div id="creationArea">
+        <div id="valShow"></div>
+    </div>
+<script src="utilities.js"></script>
+</body>
+</html>

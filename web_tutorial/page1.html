@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Dev Info</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<div class="topnav">
+        <a href=index.html>home</a>
+		<a href=page1.html>css</a>
+        <a href=page2.html>js</a>
+        <a href=page3.html>html</a>
+
+    </div>
+    <div class="column">
+<h1>
+    Rules for overriding (Specificity of CSS rules)
+</h1>
+<div class="info">One way of targeting multiple elements with css is by defining a CSS class</div>
+
+<p class="info">CSS Works by selecting html elements and applying a rule</p>
+
+<div class="info">A CSS rule consists of a declaration where a property and a value for that property are defined </div>
+<p class="info">For example this element, a p element, can be targeted by a css rule that selects it, and applies a color property with a red value to it wherever p elements occur</p>
+<div id="unique_id">
+    <a href="https://danielhampikian.com">Click on the picture
+    </a>
+</div>
+<ul>
+    <li>
+        When a CSS rule is applied, all things being equal the last CSS rule before the element it is selecting is the one that applies
+    </li>
+    <li>
+        This entails that the order of CSS rules when read by a browser is:
+        <ol>
+            <li>inline elements get applied first</li>
+            <li>then css rules that are defined internally in the html</li>
+            <li>finally css rules that are linked to an external file in the reverse order that they are listed</li>
+        </ol>
+    </li>
+    <li>
+        For inline styling, a priority of 1000 is added to specificity
+    </li>
+    <li>
+        For an id selector, a priority of 100 is added
+    </li>
+    <li>	
+        For a class a priority of 10 is added
+    </li>
+    <li>
+        For an element selector a priority of 1 is added
+    </li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

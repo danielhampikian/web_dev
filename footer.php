@@ -5,7 +5,7 @@
     <p>&copy; Daniel Hampikian 2017
     </p>
 
-    <p id = "catpic"> <img src="https://www.danielhampikian.com/images/cat.jpg" height="40px" width="40px" alt="Picture of cat on Daniel" />
+    <p id = "catpic"> <img src="https://www.danielhampikian.com/images/contemplative.jpg" height="40px" width="40px" alt="Picture of cat on Daniel" />
     </p>
 
   </div>

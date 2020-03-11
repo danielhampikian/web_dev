@@ -1,0 +1,21 @@
+
+        body {
+            background-image: url(tropical.jpg);
+        }
+        p.superclass {
+           text-align: right;
+           color:blue;
+           padding-left: 200px;
+       }
+       p {
+         text-align: center;  
+       } 
+       #hamlet{
+           color: rgb(30, 145, 106);
+       }
+       .ophelia{
+           color: blue;
+       }
+       .superclass {
+           color: rgb(6, 61, 43, .4)
+       }

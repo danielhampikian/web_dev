@@ -1,0 +1,86 @@
+.header {
+    background-color: rgba(94, 228, 199, 0.2);
+    color: rgb(221, 137, 207);
+    padding: 40px;
+    text-align: center;
+}
+.topnav {
+    overflow: hidden;
+    padding: 20px;
+    background-color: rgba(97, 95, 204, 0.4);
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: rgb(221, 137, 207);
+    text-align:  center;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    border-color: skyblue;
+    border: 2px solid rgb(246, 238, 238);
+}
+.topnav a:hover {
+    color: black;
+    background-color: rgb(221, 137, 207);
+
+}
+body {
+    color: rgb(221, 137, 207);
+    text-align: center;
+    margin:0;
+    width: 100%;
+    height: 100%;
+
+    
+}
+.column {
+    float:left;
+    text-align: left;
+    color:rgb(141, 130, 130);
+    padding: 10px;
+}
+.column.side {
+    width: 20%;
+}
+.column.middle {
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 600px){
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+.creationArea{
+    clear: both;
+    padding: 40px;
+    margin: 40px;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: rgb(221, 137, 207);
+    background-color: rgba(97, 95, 204, 0.4);
+}
+#valueShow {
+    clear:both;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    color: rgb(221, 137, 207);
+    background-color: rgba(97, 95, 204, 0.4);
+}
+button {
+    padding: 10px;
+    margin: 10px;
+}
+input {
+    padding: 10px;
+    margin: 10px;
+}

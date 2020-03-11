@@ -1,0 +1,29 @@
+a {
+    float: left;
+    padding:10px;
+    font-size: large;
+    border: 2px solid darkblue;
+}
+a:hover{
+    background-color: rgb(173, 166, 157);
+    color: lightblue;
+}
+h1{
+    clear:left;
+}
+.jeff{
+    background-color: rgba(41, 196, 196, 0.5);
+    padding:60px;
+}
+#testtag{
+    font-size: large;
+    color:blueviolet;
+}
+.heading {
+    text-align: left;
+}
+
+h1{
+    text-align: center;
+}
+

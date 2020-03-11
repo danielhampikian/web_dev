@@ -40,7 +40,7 @@
   <div class="container ">
     <div class="row">
 <div class="col-lg-4 col-sm-12 text-center col-lg-offset-4"><a href="https://www.danielhampikian.com"><img class="img-circle" alt="picture of me coding with a weird looking cat on my chest" style="width: 140px; height: 140px;" src="images/daniel/cat.jpg" data-holder-rendered="true"></a>
-  <h3>Daniel Hampikian</h3>
+  <h3>Dr. Daniel Hampikian</h3>
   <p>I have always wanted to help people improve their physical and mental wellbeing, and after studying computer science, philosophy, psychology, and neuroscience for many years, found that creating and teaching others to create software was an ideal way to help people become their best selves.  I began my career as an academic in philosophy, and became interested in minds and how they improve, degrade, and process emotions and information.  This led me to get my phd in philosophy and specialize in ethics and philosophy of mind.  After teaching for several years, I became interested in AI, and decided that the best way to acquire knowledge in this area was to learn how to create AI, so I retrained myself as a computer scientist both on my own and by taking computer science classes at BSU.  Eventually I found that I was most useful and fulfilled as a teacher teaching both technology and philosophy together, and found a place where that was welcomed in the GIMM department at Boise State University.  When I'm not being a professor, I enjoy creating songs with my band: <a 
 		href="https://www.danielhampikian.com/wordpress/">NeuroSoul  <img src="https://www.danielhampikian.com/wordpress/wp-content/uploads/2018/02/guitar_double-150x150.jpg" alt="HTML tutorial" style="width:30px;height:30px;border-radius: 50%; padding: 20px, 20px, 20px, 20px;">
 	  </a></p>
