@@ -1,0 +1,51 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple jQuery Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+// $.ajax({
+//     url: 'http://mysite.microsoft.sample.xyz.com/api/mycall',
+//     headers: {
+//         'Content-Type': 'application/x-www-form-urlencoded'
+//     },
+//     type: "POST", /* or type:"GET" or type:"PUT" */
+//     dataType: "json",
+//     data: {
+//     },
+//     success: function (result) {
+//         console.log(result);
+//     },
+//     error: function () {
+//         console.log("error");
+//     }
+// });
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("http://danielhampikian.com/:3000",
+    {
+      city: "boise"
+    },
+    function(data,status){
+	  $("div").append(data);
+	  //alert("Data: " + data);
+    });
+  });
+});
+</script>
+</head>
+<body>
+	<button id="btn">Go</button>
+	<ul>
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+		<li>item 4</li>
+	</ul>
+	<div id="Content"></div>
+</body>
+</html>

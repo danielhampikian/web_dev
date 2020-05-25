@@ -13,9 +13,16 @@ var xy = {x: -1, y:-1};
 //TODO: limited delta for gradient between color of shapes
 //TODO: Triangles pointing every direction
 //TODO: AR!!!
-
+var xVar = "H";
+var yVar = 5;
+function reassignVariables(xV, yV){
+	var place = xV;
+	xV = yV;
+	yV = place;
+	console.log("X var = " + xV, "Y var = " + yV);
+}
 window.onload = function() {
-
+	reassignVariables(xVar, yVar);
 	var addS = document.getElementById("addS");
 	addS.onclick = addSquare;
 	var addC = document.getElementById("addC");
