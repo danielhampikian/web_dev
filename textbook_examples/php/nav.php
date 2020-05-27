@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <style>
   #current_page {
   text-decoration-color: #262626;
@@ -54,11 +57,14 @@ text-decoration:none;
 <?php 
 if($current_page == "home") 
 { 
-	echo "<h1 class='info'>Welcome to my home page</h1>";
+	echo "<h1 class='info'>Please log in or create account to play</h1>";
 	
 }
 else if ($current_page == "game")
 {
-	echo "<h1 class='info'>Ready to play?</h1>";
+	// print_r($_SESSION);
+	$name = $_SESSION["username"];
+	$score = $_SESSION["score"];
+	echo "<h1 class='info'>Welcome $name your high score is currently: $score </h1>";
 }
 ?>

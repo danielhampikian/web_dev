@@ -1,5 +1,5 @@
 <?php
-   include('session.php');
+session_start();
 ?>
 <!doctype html>
 <html>
@@ -12,30 +12,36 @@
 <body>
 <?php
   $current_page = "game";
-  require_once('nav.php');
-  print($current_page);
+
+  //print($current_page);
+  if(!isset($_SESSION['username'])) {
+	  header("Location: index.php");
+	  exit;
+  }
+  else {
+    require_once('nav.php');
+    require('score.php');
+  }
+
+
 ?>
-<h1>Welcome <?php echo $login_session; ?></h1> 
-      <h2><a href = "logout.php">Sign Out: <i class='fas fa-sign-out-alt fa-5x'></i></a></h2>
-    <div id="score">
-        <div class="center">
+
+  <div id="score">
+      <div class="center">
         <h1 class="info" id=player-score>Player Info</h1>
         <h2 class="info"id="player-health"></h2>
         <h2 class="info"id="opponent-health"></h2>
     </div>
-        
-    </div>
+   </div>    
     
-    <div id="play-area">
-        <div id="opponent-cards">
-        </div>
-        <div id="player-cards">
-        </div>
-        <button id="attack-defend" onclick="startTurn()">Attack</button>
-    </div>
+  <div id="play-area">
+    <div id="opponent-cards"></div>
+    <div id="player-cards"></div>
+    <button id="attack-defend" onclick="startTurn()">Attack</button>
+  </div>
     
-    <!-- modal -->
-    <div id="game-modal" class="modal">
+  <!-- modal -->
+  <div id="game-modal" class="modal">
 
     <!-- content -->
     <div class="modal-content">
@@ -46,15 +52,6 @@
       <div class="modal-body">
         <p id="modal-title"></p>
         <p id=modal-info></p>
-        <div class="login">
-        <h1>Login</h1>
-        <form method="post" action="login.php">
-          <p><input type="text" name="username" value="" placeholder="Username"></p>
-          <p><input type="password" name="password" value="" placeholder="Password"></p>
-
-          <p class="submit"><input type="submit" name="commit" value="Login"></p>
-        </form>
-    </div>
         <div id="card-upgrade" class="card-focus">
             <div id=current-card></div>
             <button id="upgrade-attack" onclick="upgradeHealth()">+5/-5 Health</button>
@@ -67,7 +64,7 @@
       </div>
     </div>
   
-    </div>
+  </div>
 
 
 	<?php
