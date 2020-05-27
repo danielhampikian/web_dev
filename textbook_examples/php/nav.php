@@ -65,6 +65,9 @@ else if ($current_page == "game")
 	// print_r($_SESSION);
 	$name = $_SESSION["username"];
 	$score = $_SESSION["score"];
-	echo "<h1 class='info'>Welcome $name your high score is currently: $score </h1>";
+	echo "<h1 style='float:left;' class='info'>Welcome $name your high score is currently: $score </h1>
+	<form action='logout.php' method='post' id='frmLogout'>
+        <input type='submit' name='logout' value='Logout' class='btnLogin' style='width:100px; float:right; margin:20px;'>
+	</form>";
 }
 ?>
