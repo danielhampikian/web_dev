@@ -19,6 +19,7 @@ var playerHealthRef = document.getElementById("player-health");
 var opponentHealthRef = document.getElementById("opponent-health");
 var playerCardsRef = document.getElementById("player-cards");
 var opponentCardsRef = document.getElementById("opponent-cards");
+var updateText = "";
 
 
 var modalRef = document.getElementById("game-modal");
@@ -46,21 +47,17 @@ window.onclick = function(event) {
       modalRef.style.display = "none";
     }
   }
-
-$(document).ready(function () {
-    console.log("any debug values on load you want to check here:");
-});
 //to get the score to update mysql side
 function setScoreCookie(){
-      createCookie("score", playerHealth, "5");
+      createCookie("score", playerHealth, "1");
       return playerHealth;
     }
     
-function createCookie(name, value, days) {
+function createCookie(name, value, seconds) {
       var expires;
-      if (days) {
+      if (seconds) {
         var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        date.setTime(date.getTime() + (seconds * 60 * 1000));
         expires = "; expires=" + date.toGMTString();
       }
       else {
@@ -222,34 +219,23 @@ function revive(){
     modalRef.style.display = "none";
 }
 }
-
-function gameLoop() {
-    if (!gameOver) {
-        if(!inPlayerTurn) {
-           opponentTurn();
-        }
-        else if(inPlayerTurn) {
-            playerTurn();
-        }
-
-    }
+function playerTurnPrep(){
+    console.log("In player turn: values for update are inPlayerTurn: " + inPlayerTurn + " aiUpated: " + aiUpdated);
+    aiUpdated = false;
+    addListeners();
+    checkGameOver();
 }
 function opponentTurn(){
+    console.log("In opponent turn: values for update are inPlayerTurn: " + inPlayerTurn + " aiUpated: " + aiUpdated);
     checkGameOver();
-    var updateText = "";
         if(!aiUpdated) {
-    updateText += opponentAI();
-    aiUpdated = true;
-    refreshCards();
-    playerScoreRef.innerHTML = "Opponent turn: " + updateText;
-    }
-    attackDefendButtonRef.innerHTML = "Defend!"
+            updateText = opponentAI();
+            aiUpdated = true;
+            refreshCards();
+            }
+    playerTurnPrep();
 }
-function playerTurn(){
-    checkGameOver();
-    playerScoreRef.innerHTML = "Player's Turn: upgrade/revive then attack!";
-    attackDefendButtonRef.innerHTML = "Attack!"
-}
+
 function opponentAI(){
     var retText = "ready to defend against opponents attack?";
     var cardRevive;
@@ -308,33 +294,31 @@ function opponentAI(){
     }
 return retText;
 }
+
 function startTurn(){
-    //we'll force a reload if the player keeps playing for whatever reason:
-    if(gameOver){
-        checkGameOver();
-    }
+    checkGameOver();
     turnNumber++;
+    inPlayerTurn = !inPlayerTurn;
     cardBattle();
     refreshCards();
     //we only addListeners after the player takes a turn, preventing them from upgrading continously on the same turn
     addListeners();
     refreshHealth();
-    inPlayerTurn = !inPlayerTurn;
-    if(inPlayerTurn) {
-        aiUpdated = false;
-    }
+
     if(turnNumber==1){
         showModal("During your turn before you attack, click a card to upgrade, downgrade or revive, or you can directly upgrade by clicking on health or attack", "Don't forget each time you are ready to attack to first click on card you want to upgrade or revive to open the upgrade or revive options");
         cardUpgradeRef.style.display = "none";
     }
     console.log("And set playerTurn value to: " + inPlayerTurn)
-
+    opponentTurn();
 }
 function refreshHealth(){
     playerHealthRef.innerHTML = "Player Health: " + playerHealth;
     opponentHealthRef.innerHTML = "Opponent Health: " + opponentHealth;
 }
 function refreshCards(){
+    attackDefendButtonRef= document.getElementById("attack-defend");
+    playerScoreRef = document.getElementById("player-score")
     playerCardsRef = document.getElementById("player-cards");
     playerCardsRef.innerHTML = "";
     opponentCardsRef = document.getElementById("opponent-cards");
@@ -353,6 +337,18 @@ function refreshCards(){
         + card[0]+ "</h1><h1 class='health'>" + card[1] + "</h1> <div class='image'>" + card[2] +
         card[5] + card[3] + "</div></div></div>";
         }
+
+    //update ui:
+    if(inPlayerTurn){
+        playerScoreRef.innerHTML = "Player's Turn: upgrade/revive then attack!";
+        attackDefendButtonRef.innerHTML = "Attack!"
+
+    }
+    else {
+        playerScoreRef.innerHTML = "Opponent turn: " + updateText;
+        attackDefendButtonRef.innerHTML = "Defend!"
+    }
+
 }
 function cardBattle(){
     
@@ -371,36 +367,33 @@ function cardBattle(){
     checkGameOver();
 }
 function checkGameOver() {
-    // clearInterval(game);
     
-
-    if (playerHealth < 0 && opponentHealth > 0) {
+    if (playerHealth <= 0 && opponentHealth > 0) {
         gameOver = true;
         showModal("You lost!", "Play again?");
         cardUpgradeRef.style.display = "none";
         gameOverButtonRef.style.display = "block";
     }
-    else if (opponentHealth < 0 && playerHealth > 0) {
+    else if (opponentHealth <= 0 && playerHealth > 0) {
         gameOver = true;
         showModal("You won!", "Play again?");
         cardUpgradeRef.style.display = "none";
         gameOverButtonRef.style.display = "block";
-
-
     }
-    else if (playerHealthRef < 0) {
+    else if (playerHealthRef <= 0 && opponentHealth <= 0) {
         gameOver = true;
         showModal("It was a tie, both players died!", "Play again");
         cardUpgradeRef.style.display = "none";
         gameOverButtonRef.style.display = "block";
-
-
     }
 
 }
 initializeGame();
 addListeners();
 showModal("How to Play", "You play this game by attacking and defending with the button at the bottom of the screen until your opponents health is 0 or less.  The cards attack each other and if your card is dead you can revive it, otherwise it's health is subtracted each turn from total health.  To revive a card, or to upgrade its health or attack power, click on the card.  You can do one upgrade or revive per turn, choose wisely. Close this window and click the button at the bottom to begin by defending against an enemy attack");
-
-
-var game = setInterval(gameLoop,100);
+playerTurn = false;
+aiUpdated = false;
+opponentTurn();
+playerScoreRef.innerHTML = "Opponent turn: " + updateText;
+attackDefendButtonRef.innerHTML = "Defend!"
+//var game = setInterval(gameLoop,100);
