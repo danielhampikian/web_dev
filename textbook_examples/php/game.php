@@ -7,6 +7,8 @@ session_start();
 	<title>Game</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://kit.fontawesome.com/cd6864276f.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -60,7 +62,12 @@ session_start();
         </div>
       </div>
       <div class="modal-footer">
-        <h3 id="modal-foot"></h3>
+        <h2 id="modal-foot"></h2>
+        <div id="game-over" class="game-over-focus">
+          <form action='update_score.php' method='post' id='frmNewGame'onSubmit="return setScoreCookie();">
+            <input id='new-game' type='submit' name='newgame' value='New Game' class='btnLogin' style='width:140px; margin:20px;'>
+          </form>
+        </div>
       </div>
     </div>
   

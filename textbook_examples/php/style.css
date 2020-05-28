@@ -133,9 +133,6 @@
 .card-focus {
     display: none; /* Hidden by default */
   }
-  .login{
-    display:none;
-  }
   
   /* Modal Content */
   .modal-content {

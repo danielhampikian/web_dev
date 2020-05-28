@@ -23,6 +23,7 @@ var opponentCardsRef = document.getElementById("opponent-cards");
 
 var modalRef = document.getElementById("game-modal");
 var cardUpgradeRef = document.getElementById("card-upgrade");
+var gameOverButtonRef = document.getElementById("game-over");
 var currentCardRef = document.getElementById("current-card");
 var modalHeaderRef = document.getElementById("modal-head");
 var modalFooterRef = document.getElementById("modal-foot");
@@ -46,7 +47,29 @@ window.onclick = function(event) {
     }
   }
 
+$(document).ready(function () {
+    console.log("any debug values on load you want to check here:");
+});
+//to get the score to update mysql side
+function setScoreCookie(){
+      createCookie("score", playerHealth, "5");
+      return playerHealth;
+    }
+    
+function createCookie(name, value, days) {
+      var expires;
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+      }
+      else {
+        expires = "";
+      }
+      document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+    }
 function showModal(title, info){
+    gameOverButtonRef.style.display = "none";
     modalRef.style.display = "block";
     modalHeaderRef.innerHTML = "Opponent Health: " + opponentHealth;
     modalFooterRef.innerHTML = "Your Health: " + playerHealth;
@@ -288,7 +311,7 @@ return retText;
 function startTurn(){
     //we'll force a reload if the player keeps playing for whatever reason:
     if(gameOver){
-        location.reload();
+        checkGameOver();
     }
     turnNumber++;
     cardBattle();
@@ -348,23 +371,36 @@ function cardBattle(){
     checkGameOver();
 }
 function checkGameOver() {
+    // clearInterval(game);
+    
+
     if (playerHealth < 0 && opponentHealth > 0) {
         gameOver = true;
-        showModal("You lost!", "Refresh your browser to play again.");
+        showModal("You lost!", "Play again?");
         cardUpgradeRef.style.display = "none";
+        gameOverButtonRef.style.display = "block";
     }
     else if (opponentHealth < 0 && playerHealth > 0) {
         gameOver = true;
-        showModal("You won!", "Refresh your browser to play again.");
+        showModal("You won!", "Play again?");
         cardUpgradeRef.style.display = "none";
+        gameOverButtonRef.style.display = "block";
+
+
     }
-    else if (opponentHealth < 0 && playerHealthRef < 0) {
+    else if (playerHealthRef < 0) {
         gameOver = true;
-        showModal("It was a tie, both players died!", "Refresh your browser to play again");
+        showModal("It was a tie, both players died!", "Play again");
         cardUpgradeRef.style.display = "none";
+        gameOverButtonRef.style.display = "block";
+
+
     }
+
 }
 initializeGame();
 addListeners();
 showModal("How to Play", "You play this game by attacking and defending with the button at the bottom of the screen until your opponents health is 0 or less.  The cards attack each other and if your card is dead you can revive it, otherwise it's health is subtracted each turn from total health.  To revive a card, or to upgrade its health or attack power, click on the card.  You can do one upgrade or revive per turn, choose wisely. Close this window and click the button at the bottom to begin by defending against an enemy attack");
+
+
 var game = setInterval(gameLoop,100);
