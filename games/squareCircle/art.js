@@ -40,6 +40,12 @@ window.onload = function() {
 	var stopAnim = document.getElementById("stopAnim");
 	stopAnim.onclick = stopAnimation;
 };
+$("#prevImg").on('click', function () {
+	html2canvas(document.querySelector("#art")).then(canvas => {
+		document.body.appendChild(canvas);
+		getCanvas = canvas;
+	});
+});
 function timedArtStart() {
 	timer = setInterval(function(){ generateRandom() }, 1000);
 	timerArray.push(timer);
@@ -222,12 +228,7 @@ function getRandomColor() {
 	return result;
 }
 
-$("#prevImg").on('click', function () {
-	html2canvas(document.querySelector("#art")).then(canvas => {
-		document.body.appendChild(canvas);
-		getCanvas = canvas;
-	});
-});
+
 
 $("#convImg").on('click', function () {
 	var imageData = getCanvas.toDataURL("image/png");

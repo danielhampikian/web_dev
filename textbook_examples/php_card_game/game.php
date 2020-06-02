@@ -72,8 +72,6 @@ session_start();
     </div>
   
   </div>
-
-
 	<?php
   	require('footer.php');
 	?>

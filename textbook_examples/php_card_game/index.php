@@ -119,14 +119,6 @@ a.logout-button {
         <div class="demo-table">
 
                 <div class="form-head">Login</div>
-                <?php 
-                if(isset($_SESSION["errorMessage"])) {
-                ?>
-                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
-                <?php 
-                unset($_SESSION["errorMessage"]);
-                } 
-                ?>
                 <div class="field-column">
                     <div>
 						<!-- firstname -->
